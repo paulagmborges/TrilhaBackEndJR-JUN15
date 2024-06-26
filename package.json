@@ -2,7 +2,7 @@
   "name": "trilhabackendjr-jun15",
   "version": "1.0.0",
   "description": "![Código Certo Coders](https://utfs.io/f/3b2340e8-5523-4aca-a549-0688fd07450e-j4edu.jfif)",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "dev": "nodemon ./src/app.js"
   },
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
