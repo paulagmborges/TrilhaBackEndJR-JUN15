@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const User = require("../../model/userModel");
 
-async function registerUser(req, res) {
+const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
@@ -24,6 +24,6 @@ async function registerUser(req, res) {
     console.error("Erro ao registrar usuário:", error);
     res.status(500).json({ message: "Erro interno ao registrar usuário." });
   }
-}
+};
 
 module.exports = registerUser;

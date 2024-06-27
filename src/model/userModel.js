@@ -1,28 +1,25 @@
-const { Model } = require('objection');
-const Knex = require('../database/db.Config'); 
+const { Model } = require("objection");
+const Knex = require("../database/db.Config");
 
-Model.knex(Knex); // Vincula o modelo ao Knex
+Model.knex(Knex);
 
 class User extends Model {
-    static get tableName() {
-        return 'user'; // nome da tabela no banco de dados
-    }
+  static get tableName() {
+    return "user";
+  }
 
-    static get jsonSchema() {
-        return {
-            type: 'object',
-            required: ['name', 'email', 'password'],
-            properties: {
-                id: { type: 'integer' },
-                name: { type: 'string' },
-                email: { type: 'string' },
-                password: { type: 'string' },
-            }
-        };
-    }
+  static get jsonSchema() {
+    return {
+      type: "object",
+      required: ["name", "email", "password"],
+      properties: {
+        id: { type: "integer" },
+        name: { type: "string" },
+        email: { type: "string" },
+        password: { type: "string" },
+      },
+    };
+  }
 }
 
 module.exports = User;
-
-
-
