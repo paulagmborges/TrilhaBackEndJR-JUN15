@@ -1,8 +1,10 @@
-const { Router } = require('express');
-const routes = new Router();
+const { Router } = require("express");
+const routes = Router(); 
 
-routes.get('/user', (req, res) =>{
-    return res.send({message:'connect with sucess'})
-})
+const registerUser = require("../controller/userController/userCreateController");
+const loginUser = require("../controller/userController/userLoginController");
 
-module.exports = routes
+routes.post("/user", registerUser);
+routes.post("/login", loginUser);
+
+module.exports = routes;
