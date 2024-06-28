@@ -11,8 +11,8 @@
     },
     "servers": [
       {
-        "url": "http://localhost:3000",
-        "description": "Local server"
+        "url": "https://trilhabackendjr-jun15-production-1dc6.up.railway.app/",
+        "description": "Server"
       }
     ],
     "components": {
