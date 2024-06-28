@@ -6,7 +6,7 @@ const routes = require("./routes/routes");
 
 const app = express();
 const router = require("./routes/routes");
-const swaggerDocument = require("../swegger.json");
+const swaggerDocument = require("../swagger.json");
 
 app.use(express.json());
 app.use(cors());

@@ -9,13 +9,13 @@
         "email": "pcgmbz@gmail.com"
       }
     },
-"servers": [
+    "servers": [
       {
         "url": "https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs",
         "description": "Server"     
       }
     ],
-    
+    "basePath":"/",
     "components": {
       "securitySchemes": {
         "bearerAuth": {
