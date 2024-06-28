@@ -36,9 +36,12 @@ Este projeto tem como objetivo desenvolver uma API RESTful para gerenciamento de
    │   └── app.js
    │
    ├── .env
+   ├── Knexfile.js
    ├── .gitignore
    ├── README.md
+   ├── swegger.json
    └── package.json
+   
    ```
 ## Entregáveis:
    1. **Código Fonte:**
