@@ -6,17 +6,17 @@ const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(404).json({ messagem: "È obrigatório email e senha" });
+    return res.status(400).json({ message: "Email and password required" });
   }
 
   try {
     const user = await User.query().where("email", email).first();
     if (!user) {
-      return res.status(400).json({ message: "O usuário não foi encontrado" });
+      return res.status(404).json({ message: "User not found" });
     }
     const corretPassword = await bcrypt.compare(password, user.password);
     if (!corretPassword) {
-      return res.status(400).json({ message: "Email e senha não conefre" });
+      return res.status(400).json({ message: "Email and password  not match" });
     }
 
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {

@@ -5,24 +5,27 @@ const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
+    if(!name ||!email ||!password){
+        return res.status(400).json({message:"Send all data"})
+    }
     const existingUser = await User.query().where("email", email).first();
 
     if (existingUser) {
-      return res.status(400).json({ message: "Email já está em uso." });
+      return res.status(400).json({ message: "Email is already registered" });
     }
 
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hasPassword = await bcrypt.hash(password, 10);
 
     const newUser = await User.query().insert({
       name,
       email,
-      password: hashedPassword,
+      password: hasPassword,
     });
 
     res.status(201).json({ user: newUser });
   } catch (error) {
-    console.error("Erro ao registrar usuário:", error);
-    res.status(500).json({ message: "Erro interno ao registrar usuário." });
+    
+    res.status(500).json({ error: error.message  });
   }
 };
 

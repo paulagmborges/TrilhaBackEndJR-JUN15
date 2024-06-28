@@ -5,6 +5,9 @@ const createTask = async (req, res) => {
   const userId = req.user.id;
 
   try {
+    if(!title||!description){
+      return res.status(400).json({message:"Send all data"})
+    }
     const task = await Task.query().insert({
       title,
       description,
@@ -13,7 +16,7 @@ const createTask = async (req, res) => {
 
     res.status(201).json({ task });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 const listTask = async (req, res) => {
@@ -26,7 +29,7 @@ const listTask = async (req, res) => {
 
     res.json({ task });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 const updateTask = async (req, res) => {
@@ -34,14 +37,17 @@ const updateTask = async (req, res) => {
   const { title, description, completed } = req.body;
 
   try {
+    if(!title||!description){
+      return res.status(400).json({message:"Send all data."})
+    }
     let task = await Task.query().findById(taskId);
 
     if (!task) {
-      return res.status(404).json({ error: "Tarefa não encontrada." });
+      return res.status(404).json({ message: "Task not found." });
     }
 
     if (task.user_id !== req.user.id) {
-      return res.status(403).json({ error: "Acesso não autorizado." });
+      return res.status(401).json({ message: "Unauthorized access," });
     }
 
     task = await Task.query().patchAndFetchById(taskId, {
@@ -62,18 +68,18 @@ const deleteTask = async (req, res) => {
     const task = await Task.query().findById(taskId);
 
     if (!task) {
-      return res.status(404).json({ error: "Tarefa não encontrada." });
+      return res.status(404).json({ message: "Task not found." });
     }
 
     if (task.user_id !== req.user.id) {
-      return res.status(403).json({ error: "Acesso não autorizado." });
+      return res.status(403).json({ message: "Unauthorized access," });
     }
 
     await Task.query().deleteById(taskId);
 
-    res.json({ message: "Tarefa excluída com sucesso." });
+    res.status(200).json({ message: "Task deleted successfully," });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ message: error.message });
   }
 };
 
