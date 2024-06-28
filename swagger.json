@@ -32,11 +32,11 @@
     ],
     "tags": [
       {
-        "name": "User",
+        "name": "user",
         "description": "Operations related to users"
       },
       {
-        "name": "Task",
+        "name": "task",
         "description": "Operations related to tasks"
       }
     ],
