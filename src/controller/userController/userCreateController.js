@@ -5,8 +5,8 @@ const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
-    if(!name ||!email ||!password){
-        return res.status(400).json({message:"Send all data"})
+    if (!name || !email || !password) {
+      return res.status(400).json({ message: "Send all data" });
     }
     const existingUser = await User.query().where("email", email).first();
 
@@ -24,8 +24,7 @@ const registerUser = async (req, res) => {
 
     res.status(201).json({ user: newUser });
   } catch (error) {
-    
-    res.status(500).json({ error: error.message  });
+    res.status(500).json({ error: error.message });
   }
 };
 

@@ -5,8 +5,8 @@ const createTask = async (req, res) => {
   const userId = req.user.id;
 
   try {
-    if(!title||!description){
-      return res.status(400).json({message:"Send all data"})
+    if (!title || !description) {
+      return res.status(400).json({ message: "Send all data" });
     }
     const task = await Task.query().insert({
       title,
@@ -37,8 +37,8 @@ const updateTask = async (req, res) => {
   const { title, description, completed } = req.body;
 
   try {
-    if(!title||!description){
-      return res.status(400).json({message:"Send all data."})
+    if (!title || !description) {
+      return res.status(400).json({ message: "Send all data." });
     }
     let task = await Task.query().findById(taskId);
 
