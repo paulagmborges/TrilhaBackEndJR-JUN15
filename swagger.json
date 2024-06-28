@@ -15,7 +15,7 @@
         "description": "Server"     
       }
     ],
-    "basePath":"/",
+    
     "components": {
       "securitySchemes": {
         "bearerAuth": {
