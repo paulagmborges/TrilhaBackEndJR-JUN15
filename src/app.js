@@ -6,7 +6,9 @@ const routes = require("./routes/routes");
 
 const app = express();
 const router = require("./routes/routes");
+console.log('Iniciando configuração do Swagger...');
 const swaggerDocument = require("../swagger.json");
+console.log('Swagger document carregado com sucesso:', swaggerDocument);
 
 app.use(express.json());
 app.use(cors());

@@ -9,12 +9,7 @@
         "email": "pcgmbz@gmail.com"
       }
     },
-    "servers": [
-      {
-        "url": "https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs",
-        "description": "Server"     
-      }
-    ],
+   
     "basePath":"/",
     "components": {
       "securitySchemes": {
@@ -25,21 +20,7 @@
         }
       }
     },
-    "security": [
-      {
-        "bearerAuth": []
-      }
-    ],
-    "tags": [
-      {
-        "name": "user",
-        "description": "Operations related to users"
-      },
-      {
-        "name": "task",
-        "description": "Operations related to tasks"
-      }
-    ],
+
     "paths": {
       "/user": {
         "post": {
