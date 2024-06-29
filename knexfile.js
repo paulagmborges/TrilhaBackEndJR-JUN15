@@ -1,4 +1,4 @@
-// Update with your config settings.
+
 const path = require("path");
 console.log("__dirname:", __dirname);
 console.log(
