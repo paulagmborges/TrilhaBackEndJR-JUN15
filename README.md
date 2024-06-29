@@ -48,6 +48,7 @@ Este projeto é uma API RESTful para gerenciamento de tarefas, proporcionando fu
 - dotenv<br>
 - knex<br>
 - Sqlite<br>
+- Nodemon<br>
 - Swagger<br>
 
 ## Documentação :
