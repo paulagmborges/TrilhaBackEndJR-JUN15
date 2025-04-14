@@ -58,9 +58,7 @@ https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/
 
 
 ## Deploy:
-```
-https://trilhabackendjr-jun15-production-1dc6.up.railway.app/
-```
+![link](https://trilhabackendjr-jun15-production-1dc6.up.railway.app/)
 
 
 ### 💻 Executando Localmente :
