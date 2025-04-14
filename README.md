@@ -53,7 +53,7 @@ Este projeto é uma API RESTful para gerenciamento de tarefas, proporcionando fu
 
 
 ## Deploy:
-![Documentação](https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/)
+[Documentação](https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/)
 
 
 ### 💻 Executando Localmente :
