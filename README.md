@@ -1,6 +1,6 @@
-![Código Certo Coders](https://utfs.io/f/3b2340e8-5523-4aca-a549-0688fd07450e-j4edu.jfif)
 
-#  Projeto desenvolvido para a Trilha Inicial BackEnd Jr 🚀
+
+#  Projeto desenvolvido para a Trilha Inicial BackEnd Jr da comunidade Código Certo 🚀
 Este projeto é uma API RESTful para gerenciamento de tarefas, proporcionando funcionalidades de CRUD (Create, Read, Update, Delete) de tarefas, autenticação de usuários e armazenamento dos dados em um banco de dados.
 
 ## Objetivos:
@@ -51,14 +51,9 @@ Este projeto é uma API RESTful para gerenciamento de tarefas, proporcionando fu
 - Nodemon<br>
 - Swagger<br>
 
-## Documentação :
-```
-https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/
-```
-
 
 ## Deploy:
-![link]:(https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/)
+![Documentação](https://trilhabackendjr-jun15-production-1dc6.up.railway.app/api-docs/)
 
 
 ### 💻 Executando Localmente :
